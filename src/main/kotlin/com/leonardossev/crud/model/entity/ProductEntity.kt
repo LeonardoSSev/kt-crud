@@ -31,6 +31,6 @@ data class ProductEntity (
 
     @PreUpdate
     fun preUpdate(): Unit {
-        this.updatedAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now()
     }
 }

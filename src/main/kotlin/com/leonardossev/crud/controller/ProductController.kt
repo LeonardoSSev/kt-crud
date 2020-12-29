@@ -18,26 +18,26 @@ class ProductController {
 
     @GetMapping
     fun listProduct(): ResponseEntity<List<ProductDTO>> {
-        return ResponseEntity<List<ProductDTO>>(this.productService.listProduct(), HttpStatus.OK);
+        return ResponseEntity<List<ProductDTO>>(this.productService.listProduct(), HttpStatus.OK)
     }
 
     @GetMapping(value = ["/{id}"])
     fun getProduct(@PathVariable id: Long): ResponseEntity<ProductDTO> {
-        return ResponseEntity<ProductDTO>(this.productService.getProduct(id), HttpStatus.OK);
+        return ResponseEntity<ProductDTO>(this.productService.getProduct(id), HttpStatus.OK)
     }
 
     @PostMapping
     fun storeProduct(@RequestBody product: ProductStoreDTO): ResponseEntity<ProductDTO> {
-        return ResponseEntity<ProductDTO>(this.productService.storeProduct(product), HttpStatus.OK);
+        return ResponseEntity<ProductDTO>(this.productService.storeProduct(product), HttpStatus.OK)
     }
 
     @PutMapping(value = ["/{id}"])
     fun updateProduct(@RequestBody product: ProductStoreDTO, @PathVariable id: Long): ResponseEntity<ProductDTO> {
-        return ResponseEntity<ProductDTO>(this.productService.updateProduct(product, id), HttpStatus.OK);
+        return ResponseEntity<ProductDTO>(this.productService.updateProduct(product, id), HttpStatus.OK)
     }
 
     @DeleteMapping(value = ["/{id}"])
     fun destroyProduct(@PathVariable id: Long): ResponseEntity<Unit> {
-        return ResponseEntity<Unit>(this.productService.deleteProduct(id), HttpStatus.OK);
+        return ResponseEntity<Unit>(this.productService.deleteProduct(id), HttpStatus.OK)
     }
 }
