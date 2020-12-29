@@ -2,7 +2,6 @@ package com.leonardossev.crud.controller
 
 import com.leonardossev.crud.model.dto.ProductDTO
 import com.leonardossev.crud.model.dto.ProductStoreDTO
-import com.leonardossev.crud.model.entity.ProductEntity
 import com.leonardossev.crud.service.impl.ProductServiceImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus

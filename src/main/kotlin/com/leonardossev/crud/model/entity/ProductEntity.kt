@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
 import javax.persistence.Column
 import javax.persistence.PreUpdate
-import javax.persistence.PrePersist
 
 @Entity
 @Table(name = "product")
